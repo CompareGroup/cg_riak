@@ -1,0 +1,11 @@
+#------------------------------------------------------------------------------#
+# vi: set sw=4 ts=4 ai:                            ("set modeline" in ~/.exrc) #
+#------------------------------------------------------------------------------#
+# This file is under Puppet control.                                           #
+#------------------------------------------------------------------------------#
+
+# Allow nagios to call riak-admin-wrapper.sh without password.
+nagios          ALL=(riak) NOPASSWD: /usr/local/bin/riak-admin-wrapper.sh
+
+# Allows backuppc-user to call rdiff-backup
+backuppc        ALL=NOPASSWD:/usr/bin/rdiff-backup
